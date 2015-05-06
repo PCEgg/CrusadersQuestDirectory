@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC45D33B1AF9112000222FF4 /* FriendLstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC45D33A1AF9112000222FF4 /* FriendLstCell.swift */; };
 		DC525CF61AF4B4F300502CAD /* QueryCharacterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC525CF51AF4B4F300502CAD /* QueryCharacterData.swift */; };
 		DC62DBCB1AECAC7C00C25DE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62DBCA1AECAC7C00C25DE0 /* AppDelegate.swift */; };
 		DC62DBCD1AECAC7C00C25DE0 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62DBCC1AECAC7C00C25DE0 /* ListViewController.swift */; };
@@ -21,6 +22,12 @@
 		DC62DBF31AECB99C00C25DE0 /* img in Resources */ = {isa = PBXBuildFile; fileRef = DC62DBF21AECB99C00C25DE0 /* img */; };
 		DC62DBF51AECC39100C25DE0 /* CharacterListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC62DBF41AECC39100C25DE0 /* CharacterListCell.swift */; };
 		DC62DBF71AECDABD00C25DE0 /* layout in Resources */ = {isa = PBXBuildFile; fileRef = DC62DBF61AECDABD00C25DE0 /* layout */; };
+		DC73F6B71AF89EF5001772EC /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC73F6B61AF89EF5001772EC /* Firebase.framework */; };
+		DC73F6B91AF89F57001772EC /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DC73F6B81AF89F57001772EC /* libicucore.dylib */; };
+		DC73F6BB1AF89F62001772EC /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DC73F6BA1AF89F62001772EC /* libc++.dylib */; };
+		DC73F6BD1AF89F69001772EC /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC73F6BC1AF89F69001772EC /* CFNetwork.framework */; };
+		DC73F6BF1AF89F6F001772EC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC73F6BE1AF89F6F001772EC /* Security.framework */; };
+		DC73F6C11AF89F7A001772EC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC73F6C01AF89F7A001772EC /* SystemConfiguration.framework */; };
 		DCB0F2C61AF1F829009E01C8 /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB0F2C51AF1F829009E01C8 /* CharacterDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC45D33A1AF9112000222FF4 /* FriendLstCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendLstCell.swift; path = ../FriendLstCell.swift; sourceTree = "<group>"; };
 		DC525CF51AF4B4F300502CAD /* QueryCharacterData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryCharacterData.swift; sourceTree = "<group>"; };
 		DC62DBC51AECAC7C00C25DE0 /* CrusadersQuestDirectory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrusadersQuestDirectory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC62DBC91AECAC7C00C25DE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,6 +61,13 @@
 		DC62DBF21AECB99C00C25DE0 /* img */ = {isa = PBXFileReference; lastKnownFileType = folder; path = img; sourceTree = "<group>"; };
 		DC62DBF41AECC39100C25DE0 /* CharacterListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterListCell.swift; sourceTree = "<group>"; };
 		DC62DBF61AECDABD00C25DE0 /* layout */ = {isa = PBXFileReference; lastKnownFileType = folder; path = layout; sourceTree = "<group>"; };
+		DC73F6B61AF89EF5001772EC /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
+		DC73F6B81AF89F57001772EC /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		DC73F6BA1AF89F62001772EC /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		DC73F6BC1AF89F69001772EC /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		DC73F6BE1AF89F6F001772EC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		DC73F6C01AF89F7A001772EC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DC73F6C21AF8A002001772EC /* CrusadersQuestDirectory-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CrusadersQuestDirectory-Bridging-Header.h"; sourceTree = "<group>"; };
 		DCB0F2C51AF1F829009E01C8 /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +76,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC73F6C11AF89F7A001772EC /* SystemConfiguration.framework in Frameworks */,
+				DC73F6BF1AF89F6F001772EC /* Security.framework in Frameworks */,
+				DC73F6BD1AF89F69001772EC /* CFNetwork.framework in Frameworks */,
+				DC73F6BB1AF89F62001772EC /* libc++.dylib in Frameworks */,
+				DC73F6B91AF89F57001772EC /* libicucore.dylib in Frameworks */,
+				DC73F6B71AF89EF5001772EC /* Firebase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +98,12 @@
 		DC62DBBC1AECAC7C00C25DE0 = {
 			isa = PBXGroup;
 			children = (
+				DC73F6C01AF89F7A001772EC /* SystemConfiguration.framework */,
+				DC73F6BE1AF89F6F001772EC /* Security.framework */,
+				DC73F6BC1AF89F69001772EC /* CFNetwork.framework */,
+				DC73F6BA1AF89F62001772EC /* libc++.dylib */,
+				DC73F6B81AF89F57001772EC /* libicucore.dylib */,
+				DC73F6B61AF89EF5001772EC /* Firebase.framework */,
 				DC62DBC71AECAC7C00C25DE0 /* CrusadersQuestDirectory */,
 				DC62DBDF1AECAC7D00C25DE0 /* CrusadersQuestDirectoryTests */,
 				DC62DBC61AECAC7C00C25DE0 /* Products */,
@@ -100,16 +127,18 @@
 				DC62DBEC1AECB11400C25DE0 /* characters.json */,
 				DC62DBEE1AECB5FE00C25DE0 /* SwiftJSONParse.swift */,
 				DC62DBCC1AECAC7C00C25DE0 /* ListViewController.swift */,
+				DC45D33A1AF9112000222FF4 /* FriendLstCell.swift */,
+				DC62DBCE1AECAC7C00C25DE0 /* SecondViewController.swift */,
 				DCB0F2C51AF1F829009E01C8 /* CharacterDetailViewController.swift */,
 				DC525CF51AF4B4F300502CAD /* QueryCharacterData.swift */,
 				DC62DBF61AECDABD00C25DE0 /* layout */,
 				DC62DBF01AECB89600C25DE0 /* ListCharacterCellPic.swift */,
-				DC62DBCE1AECAC7C00C25DE0 /* SecondViewController.swift */,
 				DC62DBD01AECAC7C00C25DE0 /* Main.storyboard */,
 				DC62DBF41AECC39100C25DE0 /* CharacterListCell.swift */,
 				DC62DBD31AECAC7C00C25DE0 /* Images.xcassets */,
 				DC62DBD51AECAC7C00C25DE0 /* LaunchScreen.xib */,
 				DC62DBC81AECAC7C00C25DE0 /* Supporting Files */,
+				DC73F6C21AF8A002001772EC /* CrusadersQuestDirectory-Bridging-Header.h */,
 			);
 			path = CrusadersQuestDirectory;
 			sourceTree = "<group>";
@@ -247,6 +276,7 @@
 				DC62DBEF1AECB5FE00C25DE0 /* SwiftJSONParse.swift in Sources */,
 				DC62DBCB1AECAC7C00C25DE0 /* AppDelegate.swift in Sources */,
 				DC62DBF51AECC39100C25DE0 /* CharacterListCell.swift in Sources */,
+				DC45D33B1AF9112000222FF4 /* FriendLstCell.swift in Sources */,
 				DCB0F2C61AF1F829009E01C8 /* CharacterDetailViewController.swift in Sources */,
 				DC62DBF11AECB89600C25DE0 /* ListCharacterCellPic.swift in Sources */,
 				DC62DBCD1AECAC7C00C25DE0 /* ListViewController.swift in Sources */,
@@ -327,7 +357,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -365,7 +395,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -376,9 +406,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = CrusadersQuestDirectory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CrusadersQuestDirectory/CrusadersQuestDirectory-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -386,9 +424,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = CrusadersQuestDirectory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CrusadersQuestDirectory/CrusadersQuestDirectory-Bridging-Header.h";
 			};
 			name = Release;
 		};

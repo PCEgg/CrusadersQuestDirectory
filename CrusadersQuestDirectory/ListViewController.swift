@@ -12,14 +12,13 @@ var selectedCharacter: String = ""
 
 
 class ListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    @IBOutlet weak var ListCharacterView: UICollectionView!
+
     @IBOutlet weak var tableListCharacter: UITableView!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
         
         jsonResponseList()
         
@@ -31,6 +30,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         tabBarController?.tabBar.backgroundImage = UIImage(named: "layout/bottomBg.png")
     }
+    
     
 
     override func didReceiveMemoryWarning() {
@@ -65,10 +65,9 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.Lv6Pic.image = UIImage(named:characterGet6Img[indexPath.row])
         cell.JobImage.image = UIImage(named: characterJobImg[indexPath.row])
         
-        //print(characterJobImg[indexPath.row])
         
+        //cell.separatorInset = UIEdgeInsetsMake(0.0, cell.frame.size.width, 0.0, 0.0);
         
-        //cell.lv4Pic
         
         return cell
         
@@ -105,8 +104,17 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
             
             let indexPath : NSIndexPath = self.tableListCharacter.indexPathForSelectedRow()!
             
+            
             svc.selectedCharacterID = characterId[indexPath.row]
         }
+    }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return navigationController?.navigationBarHidden == true
+    }
+    
+    override func preferredStatusBarUpdateAnimation() -> UIStatusBarAnimation {
+        return UIStatusBarAnimation.Fade
     }
 
 }

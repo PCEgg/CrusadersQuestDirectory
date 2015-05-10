@@ -18,18 +18,33 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     
     var totalUserName = [String]()
     var totalUserContent = [String]()
+    var totalMessageDate = [String]()
     
     var ref = Firebase(url:"https://cqdirectory.firebaseio.com/cqdirectory/friendList")
     
     
 
     @IBAction func submitContent(sender: AnyObject) {
+        
+        if userContentInput.text.isEmpty || userNameInput.text.isEmpty {
+            
+            userNameInput.attributedPlaceholder = NSAttributedString(string:"請輪入玩家ID",
+                attributes:[NSForegroundColorAttributeName: UIColor.redColor()])
+            
+            userContentInput.attributedPlaceholder = NSAttributedString(string:"請輪入代表角色 或 其他相關內容",
+                attributes:[NSForegroundColorAttributeName: UIColor.redColor()])
+            
+            
+        } else {
        userContent = userContentInput.text
        userName = userNameInput.text
+            var currentTime = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .ShortStyle, timeStyle: .ShortStyle) as String
         
        userNameInput.clearsContextBeforeDrawing = true
+            userContentInput.clearsContextBeforeDrawing = true
         
-       passMessageToFirebase(userName, content: userContent)
+            passMessageToFirebase(userName, content: userContent, date: currentTime)
+        }
     }
     @IBOutlet weak var userNameInput: UITextField!
     @IBOutlet weak var userContentInput: UITextField!
@@ -42,7 +57,7 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         
         navigationController?.navigationBar.setBackgroundImage(topBackground, forBarPosition: UIBarPosition.Any, barMetrics: UIBarMetrics.Default)
         
-        navigationController?.navigationBar.topItem!.title = "戰友留言"
+        navigationController?.navigationBar.topItem!.title = "戰友召集"
         
         
         userNameInput.attributedPlaceholder = NSAttributedString(string:"請輪入玩家ID",
@@ -55,11 +70,14 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         tableView.rowHeight = UITableViewAutomaticDimension
         
         self.userNameInput.delegate = self
+        self.userContentInput.delegate = self
         
         // Retrieve new posts as they are added to Firebase
         ref.observeEventType(.ChildAdded, withBlock: { snapshot in
-            self.totalUserName.append(snapshot.value.objectForKey("author") as! String)
-            self.totalUserContent.append(snapshot.value.objectForKey("title") as! String)
+            
+            self.totalUserName.insert(snapshot.value.objectForKey("author") as! String, atIndex: 0)
+            self.totalUserContent.insert(snapshot.value.objectForKey("title") as! String, atIndex: 0)
+            self.totalMessageDate.insert(snapshot.value.objectForKey("date") as! String, atIndex: 0)
             //println("added -> \(snapshot.value)")
         })
         // snapshot.childrenCount will always equal count since snapshot.value will include every FEventTypeChildAdded event
@@ -69,12 +87,12 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         })
         
         ref.observeEventType(.ChildChanged, withBlock: { snapshot in
-            self.totalUserName.append(snapshot.value.objectForKey("author") as! String)
-            self.totalUserContent.append(snapshot.value.objectForKey("title") as! String)
+            self.totalUserName.insert(snapshot.value.objectForKey("author") as! String, atIndex: 0)
+            self.totalUserContent.insert(snapshot.value.objectForKey("title") as! String, atIndex: 0)
+            self.totalMessageDate.insert(snapshot.value.objectForKey("date") as! String, atIndex: 0)
             self.tableView.reloadData()
         })
-                
-
+        
     }
     
     
@@ -97,6 +115,8 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         cell.friendTitle.text = totalUserName[indexPath.row]
         
         cell.friendContent.text = totalUserContent[indexPath.row]
+        
+        cell.addedDate.text = totalMessageDate[indexPath.row]
         
         
         
@@ -133,28 +153,47 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         return 0.0;
     }
     
-    func passMessageToFirebase(name : String, content: String){
-        
-        var post1 = ["author": name, "title": content]
-        var post1Ref = ref.childByAutoId()
-        post1Ref.setValue(post1)
-        
-        
-    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+   /*
+    func textFieldShouldReturn(textField: UITextField) -> Bool{
+        
         self.view.endEditing(true)
-    }
-    
-    func textFieldShoudReturn(textField: UITextField) -> Bool{
-        textField.resignFirstResponder()
         
         return true
+        
+    }
+
+    
+    
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        //userNameInput.resignFirstResponder()
+        self.view.endEditing(false)
+
+    }*/
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool{
+        
+        self.view.endEditing(true)
+        
+        return true
+    }
+    
+    
+    
+    
+    func passMessageToFirebase(name : String, content: String, date: String){
+        
+        var post1 = ["author": name, "title": content, "date": date]
+        var post1Ref = ref.childByAutoId()
+        post1Ref.setValue(post1)
+        
+        
     }
 
 

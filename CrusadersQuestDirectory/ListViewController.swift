@@ -28,6 +28,11 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         navigationController?.navigationBar.topItem!.title = "角色圖鑑"
         
+        navigationController?.navigationItem.backBarButtonItem?.image = UIImage(named: "backBtn.png")
+        
+        
+        //navigationController?.navigationBar.topItem!.backBarButtonItem = UIImage(named: "backBtn.png")
+        
         tabBarController?.tabBar.backgroundImage = UIImage(named: "layout/bottomBg.png")
     }
     
@@ -64,6 +69,8 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.Lv5Pic.image = UIImage(named:characterGet5Img[indexPath.row])
         cell.Lv6Pic.image = UIImage(named:characterGet6Img[indexPath.row])
         cell.JobImage.image = UIImage(named: characterJobImg[indexPath.row])
+        
+        cell.CharacterListName.text = characterName[indexPath.row]
         
         
         //cell.separatorInset = UIEdgeInsetsMake(0.0, cell.frame.size.width, 0.0, 0.0);

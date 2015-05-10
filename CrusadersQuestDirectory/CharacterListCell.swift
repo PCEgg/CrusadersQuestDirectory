@@ -10,6 +10,7 @@ import UIKit
 
 class CharacterListCell: UITableViewCell {
 
+    @IBOutlet weak var CharacterListName: UILabel!
     @IBOutlet weak var JobImage: UIImageView!
     @IBOutlet weak var Lv5Pic: UIImageView!
     @IBOutlet weak var Lv4Pic: UIImageView!

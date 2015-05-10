@@ -29,6 +29,7 @@
 		DC73F6BF1AF89F6F001772EC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC73F6BE1AF89F6F001772EC /* Security.framework */; };
 		DC73F6C11AF89F7A001772EC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC73F6C01AF89F7A001772EC /* SystemConfiguration.framework */; };
 		DCB0F2C61AF1F829009E01C8 /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB0F2C51AF1F829009E01C8 /* CharacterDetailViewController.swift */; };
+		DCD62BBA1AFB45D800499AA5 /* CharacterInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD62BB91AFB45D800499AA5 /* CharacterInfoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		DC73F6C01AF89F7A001772EC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		DC73F6C21AF8A002001772EC /* CrusadersQuestDirectory-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CrusadersQuestDirectory-Bridging-Header.h"; sourceTree = "<group>"; };
 		DCB0F2C51AF1F829009E01C8 /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
+		DCD62BB91AFB45D800499AA5 /* CharacterInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterInfoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				DC45D33A1AF9112000222FF4 /* FriendLstCell.swift */,
 				DC62DBCE1AECAC7C00C25DE0 /* SecondViewController.swift */,
 				DCB0F2C51AF1F829009E01C8 /* CharacterDetailViewController.swift */,
+				DCD62BB91AFB45D800499AA5 /* CharacterInfoTableViewCell.swift */,
 				DC525CF51AF4B4F300502CAD /* QueryCharacterData.swift */,
 				DC62DBF61AECDABD00C25DE0 /* layout */,
 				DC62DBF01AECB89600C25DE0 /* ListCharacterCellPic.swift */,
@@ -279,6 +282,7 @@
 				DC45D33B1AF9112000222FF4 /* FriendLstCell.swift in Sources */,
 				DCB0F2C61AF1F829009E01C8 /* CharacterDetailViewController.swift in Sources */,
 				DC62DBF11AECB89600C25DE0 /* ListCharacterCellPic.swift in Sources */,
+				DCD62BBA1AFB45D800499AA5 /* CharacterInfoTableViewCell.swift in Sources */,
 				DC62DBCD1AECAC7C00C25DE0 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

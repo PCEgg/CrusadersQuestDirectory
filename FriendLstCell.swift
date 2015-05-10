@@ -11,6 +11,7 @@ import UIKit
 class FriendLstCell: UITableViewCell {
     @IBOutlet weak var friendListCell: UIView!
 
+    @IBOutlet weak var addedDate: UILabel!
     @IBOutlet weak var friendContent: UILabel!
     @IBOutlet weak var friendTitle: UILabel!
     override func awakeFromNib() {
